@@ -1,0 +1,29 @@
+package edu.southalabama.csc333fall2012;
+
+public class Test1 {
+	/**
+	 * @param args 
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int A = 25;
+		float B = (float) 123.4		// Another comment
+		double myC;
+		int D = 0;
+		char E = 'a';
+
+		myC = ((A * A) + (A - B)) / 50;
+
+		for (int x = 0; x < 10; x = x+1) {
+			if (x <= 1 || x == 5 && x != 8) {
+				D = D + 10;
+			}
+			else {
+				D = D + 15;
+			}
+		}
+		System.out.println ("This is the D answer =>" + D);
+		System.out.println ("This is the C answer =>" + myC);
+		System.out.println ("A character like " + E + " can be printed easily");
+	}
+}

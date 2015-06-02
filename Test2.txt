@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class BCasting
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		int trys = input.nextInt();
+		
+
+			// Each Input Line
+			for(int i = 0; i < trys; i++)
+			{
+				System.out.println(i);
+				int waste = input.nextInt();
+				int base = input.nextInt();
+				String number = input.next();
+				
+				if(base == 10)
+				{
+					System.out.println(waste + " " + (int) (Integer.parseInt(number) % 9));
+				}
+				else
+				{
+					//String digits = String.valueOf(number);
+					//digits = digits.substring(0, digits.length() - 2);
+					int length = number.length();
+					
+					
+					double temp = 0;
+					for(int j = 0; j < length; j++)
+					{
+						int val = Integer.parseInt(number.charAt(length - j - 1) + "");
+						double t1 =  (Math.pow(base, j));
+						double t =  t1 * val;
+						temp = temp + t;
+					}
+					System.out.println(waste + " " + (int)(temp % (base-1)));
+				}
+			}
+			
+			input.close();
+			System.exit(0);
+		}
+}
